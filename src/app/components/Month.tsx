@@ -22,7 +22,7 @@ const Month: React.FC<{ year: number; month: number }> = ({ year, month }) => {
                 key={i}
                 className="w-[14.2857142857%] aspect-square"
               >
-                <Day />
+                <Day isBlank={false} />
               </motion.div>
             );
           })}
