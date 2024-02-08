@@ -39,7 +39,14 @@ const MonthHeader = () => {
               day.day !== "Saturday" && "border-r-[1px]"
             }`}
           >
-            <p className={`font-minecraft ${day.color}`}>{day.day}</p>
+            <p
+              className={`font-minecraft hidden md:flex text-xs lg:text-base ${day.color}`}
+            >
+              {day.day}
+            </p>
+            <p className={`font-minecraft flex md:hidden ${day.color}`}>
+              {day.day[0]}
+            </p>
           </div>
         );
       })}
