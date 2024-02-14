@@ -35,6 +35,7 @@ const MonthHeader = () => {
       {days.map((day) => {
         return (
           <div
+            key={day.day}
             className={`w-[14.2857142857%] flex justify-center items-center ${
               day.day !== "Saturday" && "border-r-[1px]"
             }`}
