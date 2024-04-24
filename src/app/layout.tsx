@@ -7,7 +7,7 @@ import "./favicon.ico";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Workout Plug",
+  title: "Workout Mane",
   description: "The website that can get you the best workouts",
 };
 

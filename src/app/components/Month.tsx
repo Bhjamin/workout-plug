@@ -6,11 +6,15 @@ import getDayArray from "../helpers/getDayArray";
 import { AnimatePresence, motion } from "framer-motion";
 import BlankDays from "./BlankDays";
 
-const Month: React.FC<{ year: number; month: number }> = ({ year, month }) => {
+const Month: React.FC<{ year: number; month: number; date: {} }> = ({
+  year,
+  month,
+  date,
+}) => {
   const array = getDayArray(year, month);
 
   return (
-    <div className="md:w-[50%] w-[90%] flex flex-col items-center justify-start border-2 border-black rounded-md">
+    <div className="md:w-[50%] w-[90%] z-[5] flex flex-col items-center justify-start border-2 border-black rounded-md overflow-hidden">
       <MonthHeader />
       <div className="w-full flex flex-wrap">
         <AnimatePresence>
@@ -25,7 +29,7 @@ const Month: React.FC<{ year: number; month: number }> = ({ year, month }) => {
                 key={i}
                 className="w-[14.2857142857%] aspect-square"
               >
-                <Day />
+                <Day i={i} />
               </motion.div>
             );
           })}

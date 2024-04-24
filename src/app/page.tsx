@@ -7,7 +7,7 @@ const Homepage = () => {
     <div className="w-full h-screen flex flex-col items-center justify-start bg-gradient-to-br from-[#44355B] to-[#EE5622]">
       <div className="w-full h-auto flex justify-center flex-col items-center sm:flex-row sm:justify-between px-4 py-2 md:px-6 md:py-4">
         <h1 className="font-minecraft text-lg md:text-2xl lg:text-4xl xl:text-5xl">
-          The Workout Plug
+          The Workout Pluhhh
         </h1>
         <img
           className="w-[48px] h-[48px]"
@@ -18,6 +18,7 @@ const Homepage = () => {
         <Month
           year={currentDate.getFullYear()}
           month={currentDate.getMonth()}
+          date={currentDate}
         />
       </div>
     </div>
